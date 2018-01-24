@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+
+
+/*---------------reset----------------------------------------*/
+	body
+	{
+		margin: 0px;
+	}
+	
+	ul
+	{
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	li
+	{
+		display: block;
+	}
+	
+	h1
+	{
+		margin: 0px;
+	}
+	
+	a
+	{
+		text-decoration: none;
+		color: inherit;
+	}
+
+/*---abstract style---------------------------------------------------------------*/
+		
+		
+/* --component---------------------------------------------------------------- */		
+
+.btn
+{
+	
+}		
+
+.btn-default
+{
+	background: #759d2a;
+	display: inline-block;
+	min-width: 71px;
+	color: #ffffff;
+	text-align: center;
+	padding: 3px 8px;
+	border-radius: 4px;
+}		
+
+.btn-warning
+{
+	
+}	
+
+.btn-cancel
+{
+	
+}		
+		
+		
+/* ------------------------------------------------------------------------------- */		
+		.hor-menu
+		{
+			display:inline-block;
+		}
+			.hor-menu > h1
+			{
+				display: none;
+			}
+		
+		
+			/* .hor-menu>ul::after
+			{
+				content: ".";
+				display: block;
+				height: 0px;
+				overflow: hidden;
+				clear: left;
+			}
+			 */
+			.hor-menu>ul
+			{
+				overflow: auto;
+			}
+			
+				.hor-menu>ul>li 
+				{
+					float: left;
+				}
+				
+				.hor-menu.first-pad-none >ul>li:first-child  			/* 중간에 찍은.은 and의 의미 */ 
+																							/* 아이디를 대상으로 css를 주는것을 피하는 것이 좋다. */
+				{
+					padding-left: 0px; /* !important; */
+					background: none; /* !important; */
+				}
+	
+
+	
+/*----------------*/
+
+	
+	#header
+	{
+		height: 70px;
+	}
+	
+	#main
+	{
+		min-height: inherit;
+		min-width: 755px;
+		box-sizing: border-box;
+		padding: 45px 0px 40px 35px; /* 수치 지정은 시계방향 */
+	/* 		float: left; */
+	}	
+	
+/* 	#main > section > h1 
+	{
+		border: 1px solid red;
+		width: 100px;
+		height: 100px;
+		background: url("../images/logo.png") no-repeat 0px 0px;
+		background-attachment: local;
+		overflow: scroll;
+	} */
+	
+	
+		/* 국가별 명명규칙을 지킬것. css와 html 하이픈. */
+ 		.main-menu
+		{
+			font-family: '맑은고딕', '고딕', sans-serif;
+			font-size: 15px;
+			font-weight: bold;
+			color: #000000;
+		}
+
+			/* #main-menu>ul::after
+			{
+				content: ".";
+				display: block;
+				height: 0px;
+				overflow: hidden;
+				clear: left;
+			}
+			 */
+			
+			.main-menu > ul > li 
+			{
+				float: left;
+				padding-left: 24px;
+				background: url("../images/bg-main-menu-vsp.png") no-repeat 13px center;
+			}
+				
+	.member-menu
+	{
+		font-family: '맑은고딕', '고딕', sans-serif;
+		font-size: 10px;
+		font-weight: bold;
+	}	
+		
+		.member-menu > ul > li
+		{
+			padding-left: 9px;
+			background: url("../images/bg-member-menu-sp.png") no-repeat 4px center;
+		}	
+
+	
+	/* -------------------------------------------------------------------------------------------- */
+	#visual
+	{
+		height: 171px;
+		/* background:#313131  url("../images/bg-visual.png") no-repeat center; */
+		border-top: 3px solid #8CBA34;
+		
+	}
+	
+	#body
+	{
+		min-height: 300px;
+		border-top: 5px solid #8CBA34;
+		margin-top: 1px;
+	}
+	
+
+	#footer
+	{
+		height: 100px;
+		background:#313131;
+	}
+	
+	.root-container
+	{
+		height:100%;
+		min-height:inherit;
+		width: 960px;
+		/* height:inherit */
+		/*opacity:0.5; 불투명도 */
+		 margin-left: auto;
+   		 margin-right: auto;
+	}
+	
+	 #body > .root-container 
+	{
+		display : flex;
+		flex-direction: row;
+		background: url("../images/bg-body.png") repeat-y center;
+	}
+	
+	
+	
+	
+	#aside
+	{
+		min-height: inherit;
+		min-width: 205px;
+		background: url("../images/bg-aside-title.png") no-repeat left top;
+	/* 		float: left; */
+	}
+	
+	.clear-fix
+	{
+	
+	}
+	
+	.clear-fix::after
+	{
+		content: "안뇽하세요?";
+		display: block;
+		clear: both;
+		height: 0px;
+		overflow: hidden;
+	}
+
+	/*::after는 슈도코드 = 컨텐츠의 실체 없음*/
